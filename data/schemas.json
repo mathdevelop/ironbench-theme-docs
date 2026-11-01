@@ -2870,8 +2870,8 @@
    "theme_name": "Anvil",
    "theme_version": "1.0.0",
    "theme_author": "Matheus Alves",
-   "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-   "theme_support_url": "https://help.shopify.com/manual/online-store/themes"
+   "theme_documentation_url": "https://mathdevelop.github.io/anvil-theme-docs/",
+   "theme_support_url": "https://mathdevelop.github.io/anvil-theme-docs/support.html"
   },
   {
    "name": "Logo and favicon",

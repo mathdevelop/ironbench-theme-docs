@@ -17,4 +17,4 @@ node build.js --sync
 
 ## Support form
 
-The form on `support.html` posts to FormSubmit (free). Set `form_action` in `site.config.json` to `https://formsubmit.co/<your-form-id>` and rebuild. The first submission sends an activation email; after you confirm it, FormSubmit gives you a random form ID to use instead of your email address.
+The form on `support.html` posts to FormSubmit (free). `form_action` in `site.config.json` points to `https://formsubmit.co/support@math.dev.br`. The first submission sends an activation email to that address; after you confirm it, FormSubmit gives you a random form ID you can use instead of the address. Rebuild after changing it.
