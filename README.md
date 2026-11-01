@@ -1,6 +1,6 @@
-# Anvil theme documentation
+# Ironbench theme documentation
 
-Static documentation site for the Anvil Shopify theme, published with GitHub Pages from the `docs/` folder.
+Static documentation site for the Ironbench Shopify theme, published with GitHub Pages from the `docs/` folder.
 
 - `src/*.html`: hand-written pages. The comment on the first line holds the page title and description.
 - `src/assets/`: stylesheet, script, and favicon.

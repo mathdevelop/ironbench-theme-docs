@@ -39,6 +39,6 @@
       file.focus();
       return;
     }
-    subjectLine.value = `Anvil support: ${subject.value.trim() || 'New request'}`;
+    subjectLine.value = `Ironbench support: ${subject.value.trim() || 'New request'}`;
   });
 })();

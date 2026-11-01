@@ -2867,11 +2867,11 @@
  "settings": [
   {
    "name": "theme_info",
-   "theme_name": "Anvil",
+   "theme_name": "Ironbench",
    "theme_version": "1.0.0",
    "theme_author": "Matheus Alves",
-   "theme_documentation_url": "https://math.dev.br/anvil-theme-docs/",
-   "theme_support_url": "https://math.dev.br/anvil-theme-docs/support.html"
+   "theme_documentation_url": "https://math.dev.br/ironbench-theme-docs/",
+   "theme_support_url": "https://math.dev.br/ironbench-theme-docs/support.html"
   },
   {
    "name": "Logo and favicon",

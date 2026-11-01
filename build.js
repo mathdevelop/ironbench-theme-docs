@@ -1,4 +1,4 @@
-// Builds the Anvil documentation site into docs/ (served by GitHub Pages).
+// Builds the Ironbench documentation site into docs/ (served by GitHub Pages).
 // Usage: node build.js            -> uses data/schemas.json
 //        node build.js --sync     -> refreshes data/schemas.json from ../anvil first
 const fs = require('fs');
@@ -147,7 +147,7 @@ function sectionsPage() {
     toc += '</ul></li>';
   }
   return `<h1>Sections and blocks</h1>
-<p class="lead">Every section and block in Anvil, with the same names you see in the theme editor. To open the editor, go to <strong>Online Store &gt; Themes</strong> and click <strong>Customize</strong>.</p>
+<p class="lead">Every section and block in Ironbench, with the same names you see in the theme editor. To open the editor, go to <strong>Online Store &gt; Themes</strong> and click <strong>Customize</strong>.</p>
 <nav class="toc" aria-label="Sections on this page"><ul>${toc}</ul></nav>${body}`;
 }
 
@@ -160,7 +160,7 @@ function themeSettingsPage() {
     body += `<section class="ref" aria-labelledby="${slug(g.name)}"><h2 id="${slug(g.name)}">${esc(g.name)}</h2>`;
     const scheme = (g.settings || []).find((s) => s.type === 'color_scheme_group');
     if (scheme) {
-      body += `<p>Anvil ships with five color schemes per preset. Each scheme sets the colors below, and every section has a <strong>Color scheme</strong> setting to pick one.</p>`;
+      body += `<p>Ironbench ships with five color schemes per preset. Each scheme sets the colors below, and every section has a <strong>Color scheme</strong> setting to pick one.</p>`;
       body += `<div class="table-wrap"><table><thead><tr><th scope="col">Scheme color</th><th scope="col">Used for</th></tr></thead><tbody>${scheme.definition
         .map((d) => `<tr><th scope="row">${esc(d.label)}</th><td>${esc(SCHEME_USE[d.id] || '')}</td></tr>`)
         .join('')}</tbody></table></div>`;
@@ -210,14 +210,14 @@ function layout({ page, title, description, content }) {
       .map(([href, text]) => `<li><a href="${href === 'index' ? './' : `${href}.html`}"${href === page ? ' aria-current="page"' : ''}>${esc(text)}</a></li>`)
       .join('')}</ul></li>`
   ).join('');
-  const fullTitle = page === 'index' ? `Anvil theme documentation` : `${title} · Anvil theme documentation`;
+  const fullTitle = page === 'index' ? `Ironbench theme documentation` : `${title} · Ironbench theme documentation`;
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(fullTitle)}</title>
-<meta name="description" content="${esc(description || 'Documentation for Anvil, the Shopify theme for hardware, tools, and industrial supply stores.')}">
+<meta name="description" content="${esc(description || 'Documentation for Ironbench, the Shopify theme for hardware, tools, and industrial supply stores.')}">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -227,7 +227,7 @@ function layout({ page, title, description, content }) {
 <body>
 <a class="skip-link" href="#content">Skip to content</a>
 <header class="topbar">
-  <a class="brand" href="./"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">Anvil</span><span class="brand__tag">Docs</span></a>
+  <a class="brand" href="./"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">Ironbench</span><span class="brand__tag">Docs</span></a>
   <span class="topbar__version mono">v${esc(themeInfo.theme_version)}</span>
   <a class="topbar__cta" href="support.html">Contact support</a>
 </header>
@@ -239,7 +239,7 @@ function layout({ page, title, description, content }) {
   <main id="content" class="content" tabindex="-1">
 ${content}
     <footer class="page-footer">
-      <p>Anvil is a Shopify theme by ${esc(themeInfo.theme_author)}. Need help? <a href="support.html">Contact support</a>.</p>
+      <p>Ironbench is a Shopify theme by ${esc(themeInfo.theme_author)}. Need help? <a href="support.html">Contact support</a>.</p>
     </footer>
   </main>
 </div>
@@ -254,8 +254,8 @@ fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 for (const f of fs.readdirSync(path.join(SRC, 'assets'))) fs.copyFileSync(path.join(SRC, 'assets', f), path.join(OUT, 'assets', f));
 
 const generated = {
-  sections: { title: 'Sections and blocks', description: 'Reference for every section and block in the Anvil theme.', html: sectionsPage() },
-  'theme-settings': { title: 'Theme settings', description: 'Reference for every theme setting in Anvil.', html: themeSettingsPage() },
+  sections: { title: 'Sections and blocks', description: 'Reference for every section and block in the Ironbench theme.', html: sectionsPage() },
+  'theme-settings': { title: 'Theme settings', description: 'Reference for every theme setting in Ironbench.', html: themeSettingsPage() },
 };
 
 const pages = fs.readdirSync(SRC).filter((f) => f.endsWith('.html')).map((f) => f.replace('.html', ''));
