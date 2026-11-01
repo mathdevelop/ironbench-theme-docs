@@ -1,0 +1,39 @@
+<!-- {"title": "Collections and search", "description": "Filters, sorting, the list layout, and SKU search in Anvil."} -->
+<h1>Collections and search</h1>
+<p class="lead">Collection pages and search results share the same layout: filters on the left, a toolbar with sorting and the layout switch, and the product grid or list.</p>
+
+<h2 id="filters">Filters</h2>
+<p>Anvil supports Shopify's built-in storefront filtering. To choose which filters appear:</p>
+<ol class="steps">
+  <li>Install the free <strong>Shopify Search &amp; Discovery</strong> app from Shopify.</li>
+  <li>In the app, go to <strong>Filters</strong> and add filters such as Availability, Price, Product type, Vendor, or any product or variant metafield.</li>
+  <li>Make sure <strong>Enable filtering</strong> is on in the <strong>Product grid</strong> and <strong>Search results</strong> sections.</li>
+</ol>
+<p>Filters update the results without reloading the page. Customers can remove one filter with its chip or clear them all. On small screens, filters open in a drawer. Color filters show swatches when the option values have swatches.</p>
+<div class="note"><p>Filters don't appear on collections with more than 5,000 products. This is a Shopify limit.</p></div>
+
+<h2 id="list-layout">List layout</h2>
+<p>The list layout is a dense, technical view of the catalog. Each row shows the image, title, SKU, price, stock status, a quantity field, and up to 3 specifications.</p>
+<ul>
+  <li>Set <strong>Default layout</strong> to <strong>Grid</strong> or <strong>List</strong>. Search results use the list layout by default.</li>
+  <li>Turn on <strong>Let customers switch between grid and list</strong> to show the switch. The customer's choice is remembered on their device.</li>
+  <li>In <strong>Specification metafields</strong>, enter up to 3 metafield keys separated by commas, for example <code>custom.material, custom.thread_size, custom.length</code>. See <a href="product-pages.html#specifications">Specifications</a> to create them.</li>
+</ul>
+
+<h2 id="sorting">Sorting</h2>
+<p>Turn on <strong>Enable sorting</strong> to let customers sort by featured, best selling, alphabetical order, price, or date. The default sort order for a collection is set in the collection's admin page.</p>
+
+<h2 id="search">Search</h2>
+<p>Search matches product titles, product types, vendors, tags, variant titles, SKUs, and barcodes. Customers can type a part number like <code>HB-M8-40</code> and go straight to the right product.</p>
+<p>As customers type, <strong>search suggestions</strong> show matching products, collections, pages, blog posts, and suggested searches. Use the arrow keys to move through suggestions and Enter to open one. Configure suggestions in <strong>Theme settings &gt; Search</strong>:</p>
+<ul>
+  <li><strong>Show search suggestions</strong> turns the dropdown on or off.</li>
+  <li><strong>Show SKU in suggestions</strong> and <strong>Show price in suggestions</strong> add details to each product suggestion.</li>
+</ul>
+<p>Search suggestions only work with the Online Store sales channel's built-in search. Synonyms and product boosts can be set in the Search &amp; Discovery app.</p>
+
+<h2 id="product-cards">Product cards</h2>
+<p>The look of product cards is set for the whole store in <strong>Theme settings &gt; Product cards</strong>: image ratio and fit, vendor, SKU, stock status, and quick add. <strong>Show quick add</strong> adds an Add to cart button to cards for products that have no options. Products with options link to the product page so customers can choose a variant.</p>
+
+<h2 id="empty">Empty collections and no results</h2>
+<p>When a collection has no products, or when filters or a search match nothing, Anvil shows a clear message with a way to clear filters or search again. You don't need to set anything up.</p>

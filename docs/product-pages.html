@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product pages · Anvil theme documentation</title>
+<meta name="description" content="Variants, specifications, downloads, bulk order, and volume pricing on Anvil product pages.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="./"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">Anvil</span><span class="brand__tag">Docs</span></a>
+  <span class="topbar__version mono">v1.0.0</span>
+  <a class="topbar__cta" href="support.html">Contact support</a>
+</header>
+<div class="shell">
+  <details class="sidebar" id="sidebar" open>
+    <summary class="sidebar__toggle">Menu</summary>
+    <nav aria-label="Documentation"><ul class="nav"><li><span class="nav__group">Start here</span><ul><li><a href="./">Overview</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="presets.html">Presets</a></li></ul></li><li><span class="nav__group">Customize</span><ul><li><a href="theme-settings.html">Theme settings</a></li><li><a href="sections.html">Sections and blocks</a></li><li><a href="navigation.html">Header and navigation</a></li></ul></li><li><span class="nav__group">Selling</span><ul><li><a href="product-pages.html" aria-current="page">Product pages</a></li><li><a href="collections-search.html">Collections and search</a></li><li><a href="cart.html">Cart and checkout</a></li></ul></li><li><span class="nav__group">Help</span><ul><li><a href="faq.html">FAQ</a></li><li><a href="support.html">Contact support</a></li><li><a href="changelog.html">Release notes</a></li></ul></li></ul></nav>
+  </details>
+  <main id="content" class="content" tabindex="-1">
+<h1>Product pages</h1>
+<p class="lead">The <strong>Product information</strong> section is built from blocks. Add, remove, and reorder them in the theme editor on the product template.</p>
+
+<h2 id="layout">Layout</h2>
+<p>Product media sits on the left and the buying information on the right. Content blocks such as <strong>Description</strong>, <strong>Specifications</strong>, <strong>Downloads</strong>, and <strong>Collapsible row</strong> have a <strong>Placement on large screens</strong> setting:</p>
+<ul>
+  <li><strong>Next to media:</strong> shown in the right-hand column, under the buy buttons.</li>
+  <li><strong>Below media:</strong> shown under the product images, using the full width of the left column.</li>
+</ul>
+<p>On small screens, all blocks stack in the order you set in the editor. Turn on <strong>Keep product information visible when scrolling</strong> to keep the right-hand column in view while customers scroll through images.</p>
+
+<h2 id="variants">Variants and swatches</h2>
+<p>The <strong>Variant picker</strong> block shows each product option as <strong>Buttons</strong> or a <strong>Dropdown</strong>. When a customer picks an option, the price, SKU, stock status, images, and buy buttons update without reloading the page. Unavailable combinations stay visible but are marked as sold out.</p>
+<p>To show color or finish swatches, add swatches to the option values in the product's <strong>Variants</strong> card in your admin. Swatches can be a color or an image.</p>
+<p>When a variant has its own image, that image is shown first in the gallery.</p>
+
+<h2 id="specifications">Specifications</h2>
+<p>The <strong>Specifications</strong> block builds a table from product metafields. Set it up in two steps:</p>
+<ol class="steps">
+  <li>In your admin, go to <strong>Settings &gt; Custom data &gt; Products</strong> and add a metafield definition for each specification, for example <em>Material</em> (<code>custom.material</code>) or <em>Thread size</em> (<code>custom.thread_size</code>). Then fill in the values on each product.</li>
+  <li>In the theme editor, select the <strong>Specifications</strong> block and list the metafields in <strong>Product metafields</strong>, one per line, as <code>Label: namespace.key</code>:
+<pre><code>Material: custom.material
+Thread size: custom.thread_size
+Length: custom.length
+Finish: custom.finish</code></pre></li>
+</ol>
+<p>Rows with no value on a product are hidden. You can also show the vendor, product type, weight, and barcode with the checkboxes in the block.</p>
+<div class="note"><p>The same metafields can appear on product cards in the list layout. See <a href="collections-search.html#list-layout">List layout</a>.</p></div>
+
+<h2 id="downloads">Downloads</h2>
+<p>The <strong>Downloads</strong> block lists manuals, data sheets, and safety sheets from a file metafield.</p>
+<ol class="steps">
+  <li>Add a product metafield definition with the type <strong>File</strong>, and choose <strong>List of files</strong> if a product can have more than one. For example, <code>custom.documents</code>.</li>
+  <li>Upload the PDF files to each product's metafield.</li>
+  <li>In the block's <strong>File metafield</strong> setting, enter <code>custom.documents</code>.</li>
+</ol>
+<p>Use <strong>Extra link label</strong> and <strong>Extra link</strong> for a document that applies to every product, such as a warranty page.</p>
+
+<h2 id="bulk-order">Bulk order table</h2>
+<p>The <strong>Bulk order table</strong> block lists up to 50 variants of the product, each with its SKU, price, stock, and a quantity field. Customers enter quantities for several variants and add them to the cart in one click. It's ideal for screws, bolts, and fittings sold in many sizes. The block only appears on products with more than one variant.</p>
+
+<h2 id="volume-pricing">Volume pricing and quantity rules</h2>
+<p>When a B2B customer is signed in, the <strong>Volume pricing</strong> block shows the quantity rules (minimum, maximum, and increment) and price breaks from their B2B catalog. The quantity selector follows the same rules. These come from Shopify B2B, which is available on Shopify Plus. The block stays hidden for customers without a B2B catalog.</p>
+
+<h2 id="stock">Stock status</h2>
+<p>The <strong>Stock status</strong> block shows "In stock", "Low stock", or "Out of stock" from your real inventory. Set the number that counts as low stock in <strong>Theme settings &gt; Product cards &gt; Low stock threshold</strong>. Products that don't track inventory show no stock message.</p>
+
+<h2 id="pickup">Pickup availability</h2>
+<p>When local pickup is turned on for a location in <strong>Settings &gt; Shipping and delivery</strong>, the <strong>Buy buttons</strong> block shows whether the selected variant can be picked up and how soon.</p>
+
+<h2 id="buy-buttons">Buy buttons</h2>
+<ul>
+  <li><strong>Show quantity selector</strong> adds a quantity field next to the Add to cart button.</li>
+  <li><strong>Show dynamic checkout buttons</strong> shows accelerated checkout buttons, such as Shop Pay, PayPal, or Apple Pay, depending on what your customer uses.</li>
+  <li><strong>Show recipient form for gift cards</strong> lets customers send a gift card to someone else, with a message and a delivery date.</li>
+</ul>
+<p>Subscriptions and other selling plans from apps appear above the buy buttons automatically. Shop Pay Installments messaging appears under the price when it's available for your store.</p>
+
+<h2 id="complementary">Complementary products</h2>
+<p>The <strong>Complementary products</strong> block shows items that go with the product, such as drill bits for a drill. Choose them in the Shopify Search &amp; Discovery app under <strong>Product recommendations</strong>. The <strong>Related products</strong> section below the product uses Shopify's automatic recommendations.</p>
+
+<h2 id="media">Media</h2>
+<p>Product galleries support images, videos, YouTube and Vimeo links, and 3D models. Customers can swipe through media on mobile. For the cleanest catalog look, use product photos on a plain background and keep <strong>Media fit</strong> set to <strong>Show full image</strong>.</p>
+
+    <footer class="page-footer">
+      <p>Anvil is a Shopify theme by Matheus Alves. Need help? <a href="support.html">Contact support</a>.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

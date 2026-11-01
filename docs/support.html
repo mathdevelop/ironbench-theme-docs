@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact support · Anvil theme documentation</title>
+<meta name="description" content="Contact Anvil theme support. We reply within 2 business days.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="./"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">Anvil</span><span class="brand__tag">Docs</span></a>
+  <span class="topbar__version mono">v1.0.0</span>
+  <a class="topbar__cta" href="support.html">Contact support</a>
+</header>
+<div class="shell">
+  <details class="sidebar" id="sidebar" open>
+    <summary class="sidebar__toggle">Menu</summary>
+    <nav aria-label="Documentation"><ul class="nav"><li><span class="nav__group">Start here</span><ul><li><a href="./">Overview</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="presets.html">Presets</a></li></ul></li><li><span class="nav__group">Customize</span><ul><li><a href="theme-settings.html">Theme settings</a></li><li><a href="sections.html">Sections and blocks</a></li><li><a href="navigation.html">Header and navigation</a></li></ul></li><li><span class="nav__group">Selling</span><ul><li><a href="product-pages.html">Product pages</a></li><li><a href="collections-search.html">Collections and search</a></li><li><a href="cart.html">Cart and checkout</a></li></ul></li><li><span class="nav__group">Help</span><ul><li><a href="faq.html">FAQ</a></li><li><a href="support.html" aria-current="page">Contact support</a></li><li><a href="changelog.html">Release notes</a></li></ul></li></ul></nav>
+  </details>
+  <main id="content" class="content" tabindex="-1">
+<h1>Contact support</h1>
+<p class="lead">Send us your question or describe the problem. We reply within 2 business days. You'll get an email confirming that we received your request.</p>
+<p>Before you write, check the <a href="faq.html">FAQ</a>. Many answers are there.</p>
+
+<form id="support-form" class="form" action="https://formsubmit.co/YOUR-FORM-ID" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="_subject" value="Anvil support request">
+  <input type="hidden" name="_next" value="">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="Theme" value="Anvil 1.0.0">
+  <input type="hidden" name="_autoresponse" value="Thanks for contacting Anvil theme support. We've received your request and will reply within 2 business days. A copy of your message is below.">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <div class="field">
+    <label for="name">First and last name <span class="req">(required)</span></label>
+    <input id="name" name="name" type="text" autocomplete="name" required>
+  </div>
+
+  <div class="field">
+    <label for="email">Email address <span class="req">(required)</span></label>
+    <input id="email" name="email" type="email" autocomplete="email" required>
+  </div>
+
+  <div class="field">
+    <label for="store">Store URL <span class="req">(required)</span></label>
+    <input id="store" name="Store URL" type="url" inputmode="url" placeholder="https://storename.myshopify.com" aria-describedby="store-hint" required>
+    <span id="store-hint" class="hint">For example, https://storename.myshopify.com</span>
+  </div>
+
+  <div class="field">
+    <label for="subject">Subject <span class="req">(required)</span></label>
+    <input id="subject" name="Subject" type="text" maxlength="120" aria-describedby="subject-hint" required>
+    <span id="subject-hint" class="hint">Used as the subject line of your email</span>
+  </div>
+
+  <div class="field">
+    <label for="message">Description of the problem <span class="req">(required)</span></label>
+    <textarea id="message" name="message" aria-describedby="message-hint" required></textarea>
+    <span id="message-hint" class="hint">Tell us what you expected, what happened, and the page where it happens.</span>
+  </div>
+
+  <div class="field">
+    <label for="attachment">Screenshot <span class="req">(optional)</span></label>
+    <input id="attachment" name="attachment" type="file" accept="image/png,image/jpeg,image/gif,image/webp" aria-describedby="attachment-hint">
+    <span id="attachment-hint" class="hint">PNG, JPG, GIF, or WebP, up to 5 MB</span>
+  </div>
+
+  <p class="form-error" role="alert" hidden></p>
+  <button class="button" type="submit">Send request</button>
+</form>
+<p class="muted">We only use your details to answer your request.</p>
+
+<h2 id="policy">Support policy</h2>
+<h3>Response time</h3>
+<p>We reply to every request within 2 business days, Monday to Friday, excluding public holidays. Critical bugs that break a store are fixed as a priority.</p>
+
+<h3>What's covered</h3>
+<ul>
+  <li>Questions about Anvil's features, sections, and settings</li>
+  <li>Help setting up the theme as shown in this documentation</li>
+  <li>Bugs in the theme's code, which we fix in a theme update</li>
+</ul>
+
+<h3>What isn't covered</h3>
+<ul>
+  <li>Custom code, or problems caused by edits to the theme's code</li>
+  <li>Installing, configuring, or fixing third-party apps</li>
+  <li>Design work, store setup, or content entry</li>
+</ul>
+<p>For custom work, we recommend hiring a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a>. Always duplicate your theme before you edit its code.</p>
+
+<h3>Help us help you</h3>
+<p>To get an answer faster, include:</p>
+<ul>
+  <li>Your store URL, and a preview link if the theme isn't published</li>
+  <li>The page where the problem happens and the steps to see it</li>
+  <li>A screenshot, plus the browser and device you used</li>
+</ul>
+
+    <footer class="page-footer">
+      <p>Anvil is a Shopify theme by Matheus Alves. Need help? <a href="support.html">Contact support</a>.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

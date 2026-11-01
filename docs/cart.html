@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cart and checkout · Anvil theme documentation</title>
+<meta name="description" content="Cart drawer, cart page, order notes, and accelerated checkout in Anvil.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="./"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">Anvil</span><span class="brand__tag">Docs</span></a>
+  <span class="topbar__version mono">v1.0.0</span>
+  <a class="topbar__cta" href="support.html">Contact support</a>
+</header>
+<div class="shell">
+  <details class="sidebar" id="sidebar" open>
+    <summary class="sidebar__toggle">Menu</summary>
+    <nav aria-label="Documentation"><ul class="nav"><li><span class="nav__group">Start here</span><ul><li><a href="./">Overview</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="presets.html">Presets</a></li></ul></li><li><span class="nav__group">Customize</span><ul><li><a href="theme-settings.html">Theme settings</a></li><li><a href="sections.html">Sections and blocks</a></li><li><a href="navigation.html">Header and navigation</a></li></ul></li><li><span class="nav__group">Selling</span><ul><li><a href="product-pages.html">Product pages</a></li><li><a href="collections-search.html">Collections and search</a></li><li><a href="cart.html" aria-current="page">Cart and checkout</a></li></ul></li><li><span class="nav__group">Help</span><ul><li><a href="faq.html">FAQ</a></li><li><a href="support.html">Contact support</a></li><li><a href="changelog.html">Release notes</a></li></ul></li></ul></nav>
+  </details>
+  <main id="content" class="content" tabindex="-1">
+<h1>Cart and checkout</h1>
+
+<h2 id="cart-type">Cart type</h2>
+<p>Choose how the cart opens in <strong>Theme settings &gt; Cart &gt; Cart type</strong>:</p>
+<ul>
+  <li><strong>Drawer:</strong> the cart slides in from the side when a product is added, so customers can keep shopping.</li>
+  <li><strong>Page:</strong> customers stay on the product page and see a short confirmation. The cart icon opens the full cart page.</li>
+</ul>
+<p>In both cases, customers can change quantities and remove items without reloading the page. Quantity rules from B2B catalogs apply in the cart too.</p>
+
+<h2 id="notes">Order notes</h2>
+<p>Turn on <strong>Show order notes</strong> to let customers add instructions, such as a purchase order number or delivery details. Change the field's label in <strong>Order notes label</strong>. Notes appear on the order in your admin.</p>
+
+<h2 id="empty-cart">Empty cart</h2>
+<p>When the cart is empty, Anvil shows a link back to the store. To suggest products, choose a collection in <strong>Collection for empty cart</strong>.</p>
+
+<h2 id="checkout">Checkout</h2>
+<p>Checkout is managed by Shopify, so it isn't styled by the theme. To change its colors and logo, go to <strong>Settings &gt; Checkout</strong> and click <strong>Customize</strong>.</p>
+<p>Accelerated checkout buttons, such as Shop Pay, PayPal, Apple Pay, and Google Pay, appear on the cart page and on product pages. Which buttons appear depends on your payment settings and the customer's device.</p>
+<p>Discount codes are entered at checkout. Automatic discounts and discount codes already applied show in the cart.</p>
+
+    <footer class="page-footer">
+      <p>Anvil is a Shopify theme by Matheus Alves. Need help? <a href="support.html">Contact support</a>.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

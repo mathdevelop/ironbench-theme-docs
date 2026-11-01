@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ · Anvil theme documentation</title>
+<meta name="description" content="Frequently asked questions about the Anvil Shopify theme.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="./"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">Anvil</span><span class="brand__tag">Docs</span></a>
+  <span class="topbar__version mono">v1.0.0</span>
+  <a class="topbar__cta" href="support.html">Contact support</a>
+</header>
+<div class="shell">
+  <details class="sidebar" id="sidebar" open>
+    <summary class="sidebar__toggle">Menu</summary>
+    <nav aria-label="Documentation"><ul class="nav"><li><span class="nav__group">Start here</span><ul><li><a href="./">Overview</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="presets.html">Presets</a></li></ul></li><li><span class="nav__group">Customize</span><ul><li><a href="theme-settings.html">Theme settings</a></li><li><a href="sections.html">Sections and blocks</a></li><li><a href="navigation.html">Header and navigation</a></li></ul></li><li><span class="nav__group">Selling</span><ul><li><a href="product-pages.html">Product pages</a></li><li><a href="collections-search.html">Collections and search</a></li><li><a href="cart.html">Cart and checkout</a></li></ul></li><li><span class="nav__group">Help</span><ul><li><a href="faq.html" aria-current="page">FAQ</a></li><li><a href="support.html">Contact support</a></li><li><a href="changelog.html">Release notes</a></li></ul></li></ul></nav>
+  </details>
+  <main id="content" class="content" tabindex="-1">
+<h1>FAQ</h1>
+<p class="lead">Can't find your answer? <a href="support.html">Contact support</a>.</p>
+
+<div class="faq">
+  <h2 id="general">General</h2>
+  <details id="faq-plans">
+    <summary>Which Shopify plans does Anvil work on?</summary>
+    <div><p>Every plan. Volume pricing and quantity rules need Shopify B2B, which is available on Shopify Plus. Everything else works on all plans.</p></div>
+  </details>
+  <details id="faq-apps">
+    <summary>Do I need any apps for filters, search, or variants?</summary>
+    <div><p>No. Filters, sorting, search suggestions, SKU search, the variant picker, the bulk order table, and the cart are all built into the theme. The free Shopify Search &amp; Discovery app is only used to choose which filters appear and to pick complementary products.</p></div>
+  </details>
+  <details id="faq-license">
+    <summary>Can I use Anvil on more than one store?</summary>
+    <div><p>A theme purchase is valid for one store. To use Anvil on another store, buy it again from that store. Shopify lets you transfer a theme between stores you own. See Shopify's help center for details.</p></div>
+  </details>
+  <details id="faq-update">
+    <summary>How do I update Anvil without losing my settings?</summary>
+    <div><p>In <strong>Online Store &gt; Themes</strong>, click <strong>Update</strong> on the update banner. Shopify adds an updated copy with your settings and content. Code edits you made yourself aren't copied, so note them before you update. See <a href="getting-started.html#update">Updating Anvil</a>.</p></div>
+  </details>
+  <details id="faq-languages">
+    <summary>Can I translate the theme or sell in several languages?</summary>
+    <div><p>Yes. Edit any theme text in <strong>Online Store &gt; Themes &gt; … &gt; Edit default theme content</strong>. To sell in several languages, add them in <strong>Settings &gt; Languages</strong> and translate content with the Shopify Translate &amp; Adapt app. Turn on the language selector in the footer.</p></div>
+  </details>
+
+  <h2 id="catalog">Catalog</h2>
+  <details id="faq-specs">
+    <summary>Why don't my specifications show on the product page?</summary>
+    <div>
+      <p>Check these three things:</p>
+      <ol>
+        <li>The product has a value for the metafield.</li>
+        <li>The key in the <strong>Specifications</strong> block matches the metafield exactly, including the namespace, for example <code>custom.material</code>.</li>
+        <li>Each line uses the format <code>Label: namespace.key</code>.</li>
+      </ol>
+      <p>See <a href="product-pages.html#specifications">Specifications</a>.</p>
+    </div>
+  </details>
+  <details id="faq-list-specs">
+    <summary>How do I show specifications in the collection list layout?</summary>
+    <div><p>Select the <strong>Product grid</strong> section on the collection template and enter up to 3 keys in <strong>Specification metafields</strong>, separated by commas. Do the same in the <strong>Search results</strong> section and the <strong>Featured collection</strong> section.</p></div>
+  </details>
+  <details id="faq-filters">
+    <summary>My filters don't appear. What should I check?</summary>
+    <div><p>Make sure you've added filters in the Search &amp; Discovery app and that <strong>Enable filtering</strong> is on in the section. Filters only list values that exist on products in the collection, and they don't show on collections with more than 5,000 products.</p></div>
+  </details>
+  <details id="faq-sku-search">
+    <summary>Can customers search by SKU or barcode?</summary>
+    <div><p>Yes. Search and search suggestions match variant SKUs and barcodes. Make sure the SKU is filled in on each variant in your admin.</p></div>
+  </details>
+  <details id="faq-bulk">
+    <summary>Why don't I see the bulk order table?</summary>
+    <div><p>It only appears on products with more than one variant. Check that the <strong>Bulk order table</strong> block is added to the product template and isn't hidden.</p></div>
+  </details>
+  <details id="faq-stock">
+    <summary>Why does a product show no stock message?</summary>
+    <div><p>Stock messages need inventory tracking. Turn on <strong>Track quantity</strong> for the variant in your admin. Anvil only shows real stock levels.</p></div>
+  </details>
+  <details id="faq-images">
+    <summary>What image sizes should I use?</summary>
+    <div><p>Use product images at least 2048 px wide, ideally square, on a plain background. For the hero banner, use 2400 × 1200 px, and add a 3:4 image in <strong>Image on small screens</strong> if your banner has important details at the edges.</p></div>
+  </details>
+
+  <h2 id="design">Design</h2>
+  <details id="faq-colors">
+    <summary>How do I change colors?</summary>
+    <div><p>Edit the color schemes in <strong>Theme settings &gt; Colors</strong>, then choose a scheme in each section's <strong>Color scheme</strong> setting. See <a href="presets.html#schemes">Color schemes</a>.</p></div>
+  </details>
+  <details id="faq-uppercase">
+    <summary>Can I turn off uppercase headings?</summary>
+    <div><p>Yes. Turn off <strong>Use uppercase headings</strong> in <strong>Theme settings &gt; Typography</strong>.</p></div>
+  </details>
+  <details id="faq-grid-lines">
+    <summary>Can I remove the lines between product cards?</summary>
+    <div><p>Yes. Turn off <strong>Show grid lines on cards</strong> in <strong>Theme settings &gt; Layout</strong>.</p></div>
+  </details>
+  <details id="faq-custom-code">
+    <summary>Can I add my own code?</summary>
+    <div>
+      <p>Use the <strong>Custom Liquid</strong> section or block for small additions. If you edit theme files directly, duplicate the theme first. Custom code isn't covered by theme support, and code edits aren't kept when you update. For bigger changes, consider hiring a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a>.</p>
+    </div>
+  </details>
+
+  <h2 id="support-faq">Support</h2>
+  <details id="faq-response">
+    <summary>How quickly will I get a reply?</summary>
+    <div><p>Within 2 business days, usually sooner. See the <a href="support.html#policy">support policy</a>.</p></div>
+  </details>
+  <details id="faq-covered">
+    <summary>What does support cover?</summary>
+    <div><p>Questions about theme features and settings, and fixes for bugs in the theme. It doesn't cover custom code, third-party apps, or design work. See the <a href="support.html#policy">support policy</a>.</p></div>
+  </details>
+</div>
+
+    <footer class="page-footer">
+      <p>Anvil is a Shopify theme by Matheus Alves. Need help? <a href="support.html">Contact support</a>.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
