@@ -1,6 +1,6 @@
 // Builds the Ironbench documentation site into docs/ (served by GitHub Pages).
 // Usage: node build.js            -> uses data/schemas.json
-//        node build.js --sync     -> refreshes data/schemas.json from ../anvil first
+//        node build.js --sync     -> refreshes data/schemas.json from ../ironbench first
 const fs = require('fs');
 const path = require('path');
 
@@ -8,7 +8,7 @@ const ROOT = __dirname;
 const OUT = path.join(ROOT, 'docs');
 const SRC = path.join(ROOT, 'src');
 const DATA = path.join(ROOT, 'data', 'schemas.json');
-const THEME = path.join(ROOT, '..', 'anvil');
+const THEME = path.join(ROOT, '..', 'ironbench');
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf8'));
 
 if (process.argv.includes('--sync')) syncSchemas();

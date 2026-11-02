@@ -13,7 +13,7 @@ Static documentation site for the Ironbench Shopify theme, published with GitHub
 node build.js --sync
 ```
 
-`--sync` reads the schemas from `../anvil` so the reference pages match the theme editor. Run it after every theme release, then commit `docs/`.
+`--sync` reads the schemas from `../ironbench` so the reference pages match the theme editor. Run it after every theme release, then commit `docs/`.
 
 ## Support form
 
